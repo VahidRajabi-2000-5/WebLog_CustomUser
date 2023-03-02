@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block title %}Sign Up{% endblock title %}
+
+{% block content %}
+   <div class="container ">
+      <div class="card shadow my-3 p-5">
+        <form action="" method = "POST">
+          {% csrf_token %}
+          <table>
+            {{form.as_table}}
+          </table>
+          <input class = "btn btn-danger" type="submit" value = "Sign Up">
+        </form> 
+      </div> 
+    </div>
+{% endblock content %}
